@@ -1,10 +1,13 @@
-<p align="center">
+<div align="center">
   <img src="assets/header.svg" alt="PydanticAI Sandbox JP">
-</p>
 
-# PydanticAI サンドボックス 🚀
+  # PydanticAI サンドボックス 🚀
 
 PydanticAIを使った日本語での実装例やサンプルコードを集めたリポジトリです。
+
+</div>
+
+
 
 ## 🌟 PydanticAIとは
 
