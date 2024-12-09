@@ -1,0 +1,99 @@
+<svg 
+    viewBox="0 0 800 200" 
+    xmlns="http://www.w3.org/2000/svg">
+
+  <!-- グラデーションの定義 -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEFA;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFA07A;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6E6FA;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.5" />
+    </linearGradient>
+
+    <!-- テキスト用のアニメーションするグラデーション -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90E2">
+        <animate attributeName="stop-color"
+          values="#4A90E2; #50E3C2; #B8E986; #4A90E2"
+          dur="4s"
+          repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#50E3C2">
+        <animate attributeName="stop-color"
+          values="#50E3C2; #B8E986; #4A90E2; #50E3C2"
+          dur="4s"
+          repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <!-- ゆらめく丸い背景シェイプ１ -->
+  <ellipse cx="150" cy="100" rx="100" ry="50" fill="url(#grad1)">
+    <animate 
+      attributeName="rx" 
+      values="100;120;100" 
+      dur="4s" 
+      repeatCount="indefinite" 
+      calcMode="spline"
+      keySplines="0.25 0.1 0.25 1"/>
+    <animate 
+      attributeName="ry" 
+      values="50;60;50" 
+      dur="4s" 
+      repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.25 0.1 0.25 1"/>
+  </ellipse>
+
+  <!-- ゆらめく丸い背景シェイプ２ -->
+  <ellipse cx="650" cy="110" rx="90" ry="40" fill="url(#grad2)">
+    <animate 
+      attributeName="cx" 
+      values="650;660;650" 
+      dur="5s" 
+      repeatCount="indefinite" 
+      calcMode="spline"
+      keySplines="0.25 0.1 0.25 1"/>
+    <animate 
+      attributeName="ry" 
+      values="40;55;40" 
+      dur="5s" 
+      repeatCount="indefinite" 
+      calcMode="spline"
+      keySplines="0.25 0.1 0.25 1"/>
+  </ellipse>
+
+  <!-- タイトルテキスト -->
+  <text 
+    x="50%" 
+    y="50%" 
+    dominant-baseline="middle" 
+    text-anchor="middle" 
+    fill="url(#textGradient)" 
+    font-family="Arial, sans-serif" 
+    font-size="48" 
+    opacity="0">
+    PydanticAI Examples
+    <!-- フェードインアニメーション -->
+    <animate 
+      attributeName="opacity" 
+      from="0" 
+      to="1" 
+      dur="2s" 
+      fill="freeze" />
+    <!-- タイトルが少し上下に揺れるアニメーション -->
+    <animateTransform 
+      attributeName="transform"
+      type="translate"
+      values="0,0;0,-5;0,0"
+      dur="3s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.25 0.1 0.25 1"/>
+  </text>
+
+</svg>
